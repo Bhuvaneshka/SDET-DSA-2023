@@ -30,7 +30,7 @@ public class addDigits {
 //
 //			0 <= num <= 231 - 1
 		
-		int result = 1+(n-1)%9;
+		int result = n%9;
 		System.out.println(result);
 		
 	}

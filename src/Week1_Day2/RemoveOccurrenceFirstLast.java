@@ -26,33 +26,62 @@ public class RemoveOccurrenceFirstLast {
 	@Test
 	public void example() {
 		int[] arr1 = { 1, 2, 3, 4, 5, 1 };
-		int[] result = removeOccurrence(arr1);
+		int num = 1;
+		int[] result = removeOccurrence(arr1, num);
+		System.out.println(Arrays.toString(result));
+	}
+	
+	@Test
+	public void example1() {
+		int[] arr1 = { 1, 2, 1, 4, 5, 1 };
+		int num = 1;
+		int[] result = removeOccurrence(arr1, num);
+		System.out.println(Arrays.toString(result));
+	}
+	
+	//@Test
+	public void example2() {
+		int[] arr1 = { 1, 2, 1, 4, 5, 1 };
+		int num = 1;
+		int[] result = removeOccurrence(arr1, num);
 		System.out.println(Arrays.toString(result));
 	}
 
-	private int[] removeOccurrence(int[] arr1) {
-		int firstIndex = 0, lastIndex = arr1.length - 1, number = 1;
 
-		// create new array with required length which is arr1.Length+1
+	private int[] removeOccurrence(int[] arr1, int num) {
+		int firstIndex = 0, lastIndex = 0;
+		
+		//To find the first  index
+		for (int j = 0; j <arr1.length; j++) {
+			if (arr1[j] == num) {
+				firstIndex = j;
+				break;
+			}
+		}
+
+		//To find the last first index
+		for (int k = arr1.length - 1; k >= 0; k--) {
+			if (arr1[k] == num) {
+				lastIndex = k;
+				break;
+			}
+		}
+		
+		// create new array with required length which is arr1.Length - 2
 		int[] arr2 = new int[arr1.length - 2];
 
-		//loop the array
-		if (arr1[firstIndex] == number && arr1[lastIndex] == number) {
-			
-			for (int i = 1; i < arr1.length - 1; i++) {
-				
-					arr2[i] = arr1[firstIndex + i];
-					
-				
-				System.out.println(arr1[i]);
-				
-			}
-		}return arr2;
-		//else return arr1;
 		
-		// for (int i : arr2) {
-		// System.out.println(Arrays.toString(arr2));
-		// }
-
+		// loop the array
+		int m = 0;
+		for (int i = 0; i <= arr1.length-1; i++) // 0 1<6
+		{
+			if (i != firstIndex && i != lastIndex) // 1!=0
+			{
+				arr2[m] = arr1[i]; 
+				m++;
+			}
+		}
+		System.out.println(Arrays.toString(arr2));
+		return arr2;
 	}
 }

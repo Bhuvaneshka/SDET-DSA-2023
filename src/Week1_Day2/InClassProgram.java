@@ -21,15 +21,15 @@ public class InClassProgram {
 	private void moveZeroToEnd(int[] arr1) {
 
 		int[] arr2 = new int[arr1.length];
-		
-		for (int i = arr1.length-1; i > 0; i--) {
-			if(arr1[i] != 0)
+		int j = 0;
+		for (int i = 0; i < arr1.length; i++) {
+			if (arr1[i] != 0) {
+				arr2[i] = arr1[i];
+				// break;
+			}else
 			{
-				arr1[i] = arr2[i];
+			return;
 			}
-			else {
-				
-			}			
 		}
 		System.out.println(Arrays.toString(arr2));
 	}
