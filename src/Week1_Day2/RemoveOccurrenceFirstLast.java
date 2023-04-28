@@ -6,10 +6,6 @@ import org.junit.Test;
 
 public class RemoveOccurrenceFirstLast {
 
-//	3. Remove the first and last occurrence of a given number in the input array
-//	input = {1,2,3,4,5,1}, number = 1
-//	output = {2,3,5}
-
 //Psedocode:
 //1) As per the array values, the first and last index values are holding Number 1, 
 //since take first index  & last index . [int firstIndex & lastIndex]

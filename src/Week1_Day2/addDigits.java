@@ -32,6 +32,5 @@ public class addDigits {
 		
 		int result = n%9;
 		System.out.println(result);
-		
 	}
 }

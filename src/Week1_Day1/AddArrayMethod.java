@@ -4,24 +4,22 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class ArrayMethods {
+public class AddArrayMethod {
 //	3. Implement below methods using array
-//		a. add to the specific index
-//		b. print the array value as string
-//		c. contains
-//		d. remove a value
-//		e. trim to the given length
+//	 add to the specific index
 
 	@Test
 	public void example() {
 		int[] arr1 = { 5, 7, 8, 9, 10 };
+		
+//		Data for Add value in Array
 		int indexValue = 1;
 		int valueToInsert = 6;
 		addValue(arr1, indexValue, valueToInsert);
-		printArray(arr1);
+		
 	}
 
-	@Test
+	//@Test
 	public void example1() {
 		int[] arr1 = { 1, 2, 3 };
 		int indexValue = -1;
@@ -30,7 +28,7 @@ public class ArrayMethods {
 		// output: throw exception
 	}
 
-	@Test
+	//@Test
 	public void example2() {
 		int[] arr1 = {};
 		int indexValue = 3;
@@ -55,17 +53,9 @@ public class ArrayMethods {
 		}
 
 		// print the remaining values in array 2
-		for (int k = indexValue; k < arr1.length; k++)
+		for (int k = indexValue; k < arr1.length; k++) {
 			arr2[k + 1] = arr1[k];
-
+		}
 		System.out.println(Arrays.toString(arr2));
 	}
-
-	private void printArray(int[] arr1) {
-		for (int i : arr1) {
-			System.out.print(i);
-		}
-	}
 }
-
-//}
