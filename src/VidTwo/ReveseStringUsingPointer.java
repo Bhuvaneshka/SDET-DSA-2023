@@ -19,7 +19,6 @@ public class ReveseStringUsingPointer {
 			char temp = ch[right];
 			ch[right--] = ch[left];
 			ch[left++] = temp;
-
 		}
 		// System.out.println(new String(ch));
 	}

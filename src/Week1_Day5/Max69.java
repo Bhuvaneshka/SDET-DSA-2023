@@ -12,10 +12,9 @@ public class Max69 {
 			System.out.println(s[i]);
 			if(s[i]=="6")
 			{
-				s[i] = '9';
+				s[i] = "9";
 				break;
 			}
-			
 		}
 		System.out.println(Arrays.toString(s));
 	}

@@ -19,10 +19,11 @@ public class RemoveDuplicateInSortedArray {
 //		3) Check the condition if arr1[i] == arr1[i+1] is pass then store the index value into arr1[newIndexPosition]
 //		4) Repeat the loop until the loop ends
 //		5) return the newIndexPosition which is K value along with the arr1 print
-				
+	
+	
 	@Test
 	public void example() {
-		int[] arr1 = {1,1,2,3,4,4,5};
+		int[] arr1 = {1,1,1,2,3,4,4,5};
 		removeDeplicates(arr1);
 	}
 	

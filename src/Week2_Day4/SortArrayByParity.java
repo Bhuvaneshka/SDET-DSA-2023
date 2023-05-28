@@ -60,20 +60,13 @@ public class SortArrayByParity {
 	}
 
 	private void sortArray(int[] nums) {
-		int left = 0, right = nums.length-1;
-
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] % 2 == 0) {
-				nums[left] = nums[i];
-				System.out.println(nums[left]);
-			}
-			left++;
-			
-			if (nums[i] % 2 != 0) {
-				nums[right] = nums[i];
-				System.out.println(nums[right]);
-			}
-			right--;
+		int start = 0, end = nums.length - 1;
+		while(start<end) {
+		while(start<end && nums[start] % 2 == 0) start++;
+		while(start<end && nums[end] % 2 != 0) end--;
+				int temp = nums[start];
+				nums[start] = nums[end];
+				nums[end] = temp;
 		}
 		System.out.println(Arrays.toString(nums));
 	}
