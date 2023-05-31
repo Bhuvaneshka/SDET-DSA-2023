@@ -23,6 +23,13 @@ public class LeetCode917_ReverseOnlyLetters {
 		System.out.println(ReverseLetters(s));
 //		output= "dc-ba"
 	}
+	
+	@Test
+	public void example7() {
+		String s = "--aB-----------";
+		System.out.println(ReverseLetters(s));
+//		output= "dc-ba"
+	}
 
 	@Test
 	public void example2() {

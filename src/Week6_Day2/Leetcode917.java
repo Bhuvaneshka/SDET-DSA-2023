@@ -46,6 +46,13 @@ public class Leetcode917 {
 		System.out.println(ReverseLetters(s));
 //		output= "aBbA_1a"
 	}
+	
+	@Test
+	public void example6() {
+		String s = "--aB-----------";
+		System.out.println(ReverseLetters(s));
+//		output= "aBbA_1a"
+	}
 
 	private String ReverseLetters(String s) {
 

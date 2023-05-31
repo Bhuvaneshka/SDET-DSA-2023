@@ -20,7 +20,11 @@ public class SplitStringInBalancedStrings {
 	 * 4) check if the second value is equal to top of the stack, if yes then push the next value 
 	 * 5) else pop the value out then check if the stack is empty, if yes, increment the counter else continue
 	 * 6) Finally return the counter value
+	 * 
+	 * Time Complexity: O(n)
+	 * Space Complexity: O(1)
 	 */
+	
 	
 	@Test
 	public void example1() {
